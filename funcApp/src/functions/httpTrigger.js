@@ -3,17 +3,15 @@ const contentful = require('contentful');
 const { CosmosClient } = require('@azure/cosmos');
 require('dotenv').config();
 
-// Initialize Contentful client
 const client = contentful.createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     environment: 'master',
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 });
 
-// Initialize Cosmos DB client
 const cosmosClient = new CosmosClient(process.env.COSMOS_DB_CONNECTION_STRING);
-const database = cosmosClient.database('azure-db');  // Use your Cosmos DB database name
-const container = database.container('azure-db');     // Use your Cosmos DB container name
+const database = cosmosClient.database('azure-db');
+const container = database.container('azure-db');
 
 app.http('httpTrigger', {
     methods: ['POST', 'GET'],
@@ -60,7 +58,7 @@ app.http('httpTrigger', {
             }
         }
 
-        // Retrieve the latest image URL from Cosmos DB
+        // Retrieve the latest image URL
         if (request.method === 'GET') {
             try {
                 const { resource } = await container.item('latestImage').read();
