@@ -1,6 +1,6 @@
 const { app } = require('@azure/functions');
 const contentful = require('contentful');
-const { CosmosClient } = require('@azure/cosmos');
+const { CosmosClient } = require('@azure/cosmos'); 
 require('dotenv').config();
 
 const client = contentful.createClient({
