@@ -36,5 +36,5 @@ jobs:
       - name: Deploy Azure Function App
         uses: azure/functions-action@v1
         with:
-          app-name: ${{ github.ref == 'refs/heads/dev' && 'your-function-app-name-dev' || 'your-function-app-name-prod' }}
+          app-name: ${{ github.ref == 'refs/heads/dev' && 'myFunctionApp1337' || 'myFunctionApp1337-prod' }}
           package: '.'   # This assumes your Azure Function App code is in the root; change if needed
