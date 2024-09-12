@@ -8,7 +8,7 @@ function ImageDisplay() {
     useEffect(() => {
         const fetchImageUrl = async () => {
             try {
-                const response = await fetch('https://https://newfunc123.azurewebsites.net/api/testFunc123', { method: 'GET' });
+                const response = await fetch('https://https://newfunc123.azurewebsites.net/api/httpTrigger', { method: 'GET' });
                 const data = await response.json();
                 if (response.ok && data.imageUrl)
                     setImageUrl(data.imageUrl);
