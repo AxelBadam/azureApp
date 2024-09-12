@@ -15,6 +15,8 @@ function ImageDisplay() {
                     setImageUrl(data.imageUrl);
                 else 
                     setError("No image available.");
+                // const localImage = "Mannerheim1940.jpg"; // Path to your local image in the 'public' folder
+                // setImageUrl(localImage);
 
             } 
             catch (err) {
