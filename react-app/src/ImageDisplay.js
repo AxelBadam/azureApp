@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './ImageDisplay.css';
 
 function ImageDisplay() {
     const [imageUrl, setImageUrl] = useState(null);
@@ -31,7 +32,12 @@ function ImageDisplay() {
         return <div>Loading...</div>;
     if (error)
         return <div>{error}</div>;
-    return <img src={imageUrl} alt="Cosmos DB render" />;
+    return (
+    <div className="image-container">
+        <img src={imageUrl} alt="Responsive" className="responsive-image" />
+    </div>
+    );
+    // return <img src={imageUrl} alt="Cosmos DB render" />;
 }
 
 export default ImageDisplay;
