@@ -2,7 +2,7 @@
 
 ## Overview
 
-AzureApp is a learning project created to explore and familiarize myself with various Azure services including Azure Static Web Apps, Azure Functions, Azure Cosmos DB, and Cloud in general. The project also incorporates GitHub Actions for Continuous Integration (CI) and Continuous Deployment (CD), giving me hands-on experience with automating the deployment process. Additionally, I worked on managing APIs and integrating an external Contentful CMS for dynamic content management. As of now, the website displays a simple image.  Now that the foundation is in place, further development and functionality could easily be added. 
+AzureApp is a learning project created to explore and familiarize myself with various Azure services including Azure Static Web Apps, Azure Functions, Azure Cosmos DB, and Cloud in general. The project also incorporates GitHub Actions for CI/CD, giving me hands-on experience with automating the deployment process. Additionally, I worked on managing APIs and integrating an external Contentful CMS for dynamic content management. As of now, the website displays a simple image.  Now that the foundation is in place, further development and functionality can easily be added. 
 
 ![Diagram](./diagram.drawio.png)
 
