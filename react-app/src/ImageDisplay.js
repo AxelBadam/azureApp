@@ -31,7 +31,7 @@ function ImageDisplay() {
         return <div>Loading...</div>;
     if (error)
         return <div>{error}</div>;
-    return <img src={imageUrl} alt="Image from Cosmos DB" />;
+    return <img src={imageUrl} alt="Cosmos DB render" />;
 }
 
 export default ImageDisplay;
