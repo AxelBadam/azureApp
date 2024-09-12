@@ -2,14 +2,12 @@ const { CosmosClient } = require('@azure/cosmos');
 const { app } = require('@azure/functions');
 require('dotenv').config();
 
-
 const connectionString = process.env.CUSTOMCONNSTR_COSMOS_CONNECTION_STRING;
 
 if (!connectionString) {
     throw new Error("Cosmos DB connection string is not defined in environment variables.");
 }
 
-// Use the CosmosClient with the connection string
 const cosmosClient = new CosmosClient(connectionString);
 let database;
 let container;
@@ -17,10 +15,9 @@ let container;
 try {
     database = cosmosClient.database('azure-db');
     container = database.container('azure-db');
-    // Perform operations on the database and container here
 } catch (error) {
     console.error('Error connecting to Cosmos DB or container:', error);
-    throw new Error("Cosmos DB operation failed."); // Optional: Better error handling
+    throw new Error("Cosmos DB operation failed.");
 }
 
 app.http('httpTrigger', {
